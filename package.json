@@ -4,7 +4,6 @@
   "description": "``To be updated soon``",
   "main": "app.js",
   "scripts": {
-    
     "start": "nodemon app.js"
   },
   "repository": {
