@@ -1,0 +1,31 @@
+{
+  "name": "movieplug",
+  "version": "1.0.0",
+  "description": "``To be updated soon``",
+  "main": "app.js",
+  "scripts": {
+    
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kraymond1738/MoviePlug.git"
+  },
+  "keywords": [
+    "MoviePlug"
+  ],
+  "author": "Kasumba Raymond, Christian Mba, Afolabi Oluwaseyi, Kwaku Owusu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kraymond1738/MoviePlug/issues"
+  },
+  "homepage": "https://github.com/Kraymond1738/MoviePlug#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "mongodb": "^6.1.0",
+    "mongoose": "^7.5.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}
