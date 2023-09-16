@@ -1,17 +1,19 @@
 /* importing modules */
 const express = require('express');
 const mongoose = require('mongoose');
-const url = 'mongodb://localhost/MoviePlug';
+const path = require('path');
+const connectDB = require('./utils/db');
 
-/*creating app instance*/
+const PORT = process.env.PORT || 5000;
+
+connectDB();
 const app = express();
 
-/*connecting to database*/
-mongoose.connect(url, {useNewUrlParser: true});
-const con = mongoose.connection;
-
-/* check connection */
-con.on('open', () => console.log('Database connected...'));
+/*middleware*/
+app.use(express.urlencoded({ extended: false}));
+app.use(express.json());
+app.use(express.static(path.join(__dirname, '/public')));
+app.use('/', require('./routes/index'));
 
 /* start server */
-app.listen(5000, () => console.log('server started'));
+app.listen(PORT, () => console.log(`server started on port ${PORT}`));
