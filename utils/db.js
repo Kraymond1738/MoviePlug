@@ -1,12 +1,29 @@
 const mongoose = require('mongoose');
-const url = 'mongodb://localhost/MoviePlug';
+const mongoURI = 'mongodb://localhost/MoviePlug';
 
-async function dbconnect() {
-  try {
-    await mongoose.connect(url, { useNewUrlParser: false, useUnifiedTopology: false });
-  } catch (error) {
-    console.error('Error connecting to the database:', error);
-  }
-}
+mongoose.Promise = global.Promise;
 
-module.exports = dbconnect;
+// Connect to the MongoDB database
+mongoose.dbconnect(mongoURI, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+});
+
+// Get the default connection
+const db = mongoose.connection;
+
+// Bind connection events
+db.on('connected', () => {
+  console.log(`Connected to MongoDB at ${mongoURI}`);
+});
+
+db.on('error', (err) => {
+  console.error(`MongoDB connection error: ${err}`);
+});
+
+db.on('disconnected', () => {
+  console.log('MongoDB disconnected');
+});
+
+// Export the Mongoose connection
+module.exports = db;
