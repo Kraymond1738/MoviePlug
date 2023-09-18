@@ -3,7 +3,13 @@ const bcrypt = require('bcrypt');
 
 // Define the User schema
 const userSchema = new mongoose.Schema({
-  username: {
+  firstname: {
+    type: String,
+    required: true,
+    unique: true,
+    trim: true,
+  },
+  lastname: {
     type: String,
     required: true,
     unique: true,
@@ -19,6 +25,11 @@ const userSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  phoneNumber: {
+    type: String,
+    required: true,
+    unique: true,
+  }
 });
 
 // Hash the user's password before saving to the database
