@@ -1,21 +1,45 @@
-/* importing modules */
+//importing modules
 const express = require('express');
+const morgan = require('morgan');
+const bodyParser = require('body-parser');
+const cors = require('cors');
 const mongoose = require('mongoose');
 const path = require('path');
 const connectDB = require('./utils/db');
+const session = require('express-session');
+const flash = require('connect-flash');
 
 const PORT = process.env.PORT || 5000;
 
 connectDB();
 const app = express();
 
-/*middleware*/
+// express-session middleware
+app.use(session({
+  secret: 'MoviePlug',
+  resave: false,
+  saveUninitialized: false,
+}));
+
+
+//middleware
+app.use(flash());
 app.use(express.urlencoded({ extended: false}));
 app.use(express.json());
 app.use(express.static(path.join(__dirname, '/public')));
 app.use('/', require('./routes/index'));
+app.use(morgan('dev'));
+app.use(bodyParser.json());
+app.use(cors());
 
-/*handle pages not found*/
+
+// Error handling middleware
+app.use((err, req, res, next) => {
+  console.error(err.stack);
+  res.status(500).json({ error: 'Something went wrong!' });
+});
+
+//handle pages not found
 app.all('*', (req, res) => {
 	res.status(404);
 	if (req.accepts('html')) {
@@ -25,7 +49,7 @@ app.all('*', (req, res) => {
 	} else res.type('txt').send("404 Not Found ....");
 });
 
-/* start server after checkeing connection */
+//start server after checkeing connection
 mongoose.connection.once('open', () => {
 	console.log('Database connected ....');
 	app.listen(PORT, () => console.log(`server started on port ${PORT}`));
