@@ -3,12 +3,22 @@ const bcrypt = require('bcrypt');
 
 // Define the User schema
 const userSchema = new mongoose.Schema({
+<<<<<<< HEAD:models/User.js
   firstName: {
     type: String,
     required: true,
     trim: true,
   },
    lastName: {
+=======
+  firstname: {
+    type: String,
+    required: true,
+    unique: true,
+    trim: true,
+  },
+  lastname: {
+>>>>>>> bfea23002208ddf0fd11aed5ecbb1be37de1d434:models/user.js
     type: String,
     required: true,
     trim: true,
@@ -26,8 +36,13 @@ const userSchema = new mongoose.Schema({
   phoneNumber: {
     type: String,
     required: true,
+<<<<<<< HEAD:models/User.js
     trim: true,
   },
+=======
+    unique: true,
+  }
+>>>>>>> bfea23002208ddf0fd11aed5ecbb1be37de1d434:models/user.js
 });
 
 // Hash the user's password before saving to the database
@@ -37,13 +52,10 @@ userSchema.pre('save', async function (next) {
       return next();
     }
 
-    // Generate a salt
     const salt = await bcrypt.genSalt(10);
 
-    // Hash the password with the salt
     const hashedPassword = await bcrypt.hash(this.password, salt);
 
-    // Replace the plain text password with the hashed password
     this.password = hashedPassword;
 
     return next();
@@ -62,7 +74,6 @@ userSchema.methods.comparePassword = async function (candidatePassword) {
   }
 };
 
-// Create the User model
 const User = mongoose.model('User', userSchema);
 
 module.exports = User;

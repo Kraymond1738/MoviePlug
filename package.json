@@ -21,15 +21,22 @@
   "homepage": "https://github.com/Kraymond1738/MoviePlug#readme",
   "dependencies": {
     "bcrypt": "^5.1.1",
+<<<<<<< HEAD
     "connect-flash": "^0.1.1",
     "cors": "^2.8.5",
+=======
+>>>>>>> bfea23002208ddf0fd11aed5ecbb1be37de1d434
     "express": "^4.18.2",
     "express-session": "^1.17.3",
     "mongodb": "^6.1.0",
     "mongoose": "^7.5.2",
+<<<<<<< HEAD
     "morgan": "^1.10.0",
     "passport": "^0.6.0",
     "passport-local": "^1.0.0"
+=======
+    "passport": "^0.6.0"
+>>>>>>> bfea23002208ddf0fd11aed5ecbb1be37de1d434
   },
   "devDependencies": {
     "nodemon": "^3.0.1"
