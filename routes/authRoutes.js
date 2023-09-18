@@ -5,12 +5,12 @@ const userController = require('../controllers/userController'); // Import userC
 
 // Route to serve the signup page
 router.get('/signup', (req, res) => {
-  res.sendFile(path.join(__dirname, '../public/signup.html'));
+  res.sendFile(path.join(__dirname, '../public/html/signup.html'));
 });
 
 // Route to serve the login page
 router.get('/login', (req, res) => {
-  res.sendFile(path.join(__dirname, '../public/login.html'));
+  res.sendFile(path.join(__dirname, '../public/html/login.html'));
 });
 
 // Route for user registration (signup)
