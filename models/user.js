@@ -39,13 +39,10 @@ userSchema.pre('save', async function (next) {
       return next();
     }
 
-    // Generate a salt
     const salt = await bcrypt.genSalt(10);
 
-    // Hash the password with the salt
     const hashedPassword = await bcrypt.hash(this.password, salt);
 
-    // Replace the plain text password with the hashed password
     this.password = hashedPassword;
 
     return next();
@@ -64,7 +61,6 @@ userSchema.methods.comparePassword = async function (candidatePassword) {
   }
 };
 
-// Create the User model
 const User = mongoose.model('User', userSchema);
 
 module.exports = User;
