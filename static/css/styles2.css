@@ -159,7 +159,7 @@ nav .fas{
     font-weight: 400;
 }
 .contact-col input, .contact-col textarea{
-    width: 100%;
+    width: 80%;
     padding: 15px;
     margin-bottom: 17px;
     outline: none;
@@ -210,7 +210,7 @@ nav .fas{
     border-radius: 10px;
     margin-left: 80px;
     transition: 3s;
-    margin-left: 170px;
+    margin-left: 120px;
 }
 .red-btn:hover{
     color: #fff;
@@ -220,6 +220,12 @@ nav .fas{
     .sub-header h1{
         font-size: 24px;
     }
+}
+
+.hero-image2 {
+    width: 500px;
+    float: right;
+    margin-top: -550px
 }
 .footer{
     width: 100%;
