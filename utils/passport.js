@@ -30,7 +30,7 @@ passport.use(
           return done(null, false, { message: 'Incorrect email or password' });
         }
 
-        //check the password
+        // Check the password
         const isMatch = await user.comparePassword(password);
 
         if (isMatch) {

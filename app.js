@@ -23,10 +23,10 @@ app.use(session({
 
 
 //middleware
+app.use(morgan('dev'));
 app.use(flash());
 app.use(express.urlencoded({ extended: false}));
 app.use(express.json());
-app.use(morgan('dev'));
 app.use(express.static(path.join(__dirname, '/public')));
 app.use('/', require('./routes/index'));
 app.use(bodyParser.json());
