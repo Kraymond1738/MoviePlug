@@ -15,4 +15,6 @@ router.post('/auth/signup', UserController.signup);
 
 router.post('/auth/login', UserController.login);
 
+router.post('/movie/search', movieController.movieSearch);
+
 module.exports = router;
