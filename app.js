@@ -26,9 +26,9 @@ app.use(session({
 app.use(flash());
 app.use(express.urlencoded({ extended: false}));
 app.use(express.json());
+app.use(morgan('dev'));
 app.use(express.static(path.join(__dirname, '/public')));
 app.use('/', require('./routes/index'));
-app.use(morgan('dev'));
 app.use(bodyParser.json());
 app.use(cors());
 
@@ -37,6 +37,7 @@ app.use(cors());
 app.use((err, req, res, next) => {
   console.error(err.stack);
   res.status(500).json({ error: 'Something went wrong!' });
+  next();
 });
 
 //handle pages not found

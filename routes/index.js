@@ -10,7 +10,6 @@ router.get('/signup(.html)?', (req, res) => {
 
 router.get('/login(.html)?', (req, res) => {
          res.sendFile(path.join(__dirname, '..', 'public', 'html', 'login.html'));
-         res.render('login', { message: req.flash('error') }); 
 });
 
 router.post('/auth/signup', async (req, res) => {
