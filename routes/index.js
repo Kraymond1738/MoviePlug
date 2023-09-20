@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const path = require('path');
 const UserController = require('../controllers/userController');
-//const movieController = require('../controllers/movieController');
+const movieController = require('../controllers/movieController');
 
 router.get('/signup(.html)?', (req, res) => {
   res.sendFile(path.join(__dirname, '..', 'public', 'html', 'signup.html'));
@@ -17,7 +17,7 @@ router.get('/landing(.html)?', (req, res) => {
 });
 
 router.get('/home(.html)?', (req, res) => {
-        res.sendFile(path.join(__dirname, '..', 'public', 'html', 'Home.html'));
+        res.sendFile(path.join(__dirname, '..', 'public', 'html', 'home.html'));
 });
 
 router.get('/About(.html)?', (req, res) => {
@@ -32,10 +32,14 @@ router.get('/contact(.html)?', (req, res) => {
         res.sendFile(path.join(__dirname, '..', 'public', 'html', 'contact.html'));
 });
 
+router.get('/search(.html)?', (req, res) => {
+        res.sendFile(path.join(__dirname, '..', 'public', 'html', 'search.html'));
+});
+
 router.post('/auth/signup', UserController.signup);
 
 router.post('/auth/login', UserController.login);
 
-//router.post('/movie/search', movieController.movieSearch);
+router.get('/movie/search', movieController.movieSearch);
 
 module.exports = router;
