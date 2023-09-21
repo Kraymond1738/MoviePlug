@@ -1,64 +1,56 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const movieSearchForm = document.getElementById('movie-search-form');
-    const movieQueryInput = document.getElementById('movie-query');
-    const movieResultsContainer = document.getElementById('movie-results');
+document.addEventListener("DOMContentLoaded", function () {
+    const form = document.getElementById("movie-search-form");
+    const movieResults = document.getElementById("movie-results");
 
-    movieSearchForm.addEventListener('submit', async (e) => {
+    form.addEventListener("submit", async function (e) {
         e.preventDefault();
 
-        const movieQuery = movieQueryInput.value.trim();
+        const queryInput = document.getElementById("movie-query");
+        const movieName = queryInput.value.trim();
 
-        if (movieQuery === '') {
-            alert('Please enter a movie name.');
+        if (movieName.length === 0) {
+            alert("Cant take empty string");
+            console.log('Query cant be empty');
             return;
         }
 
         try {
-            // Send the movie query as a query parameter in the URL
-            const response = await fetch(`http://localhost:5000/movies/search?movie=${encodeURIComponent(movieQuery)}`);
-            
-            console.log(response);
+            const response = await fetch(`/movie/search/${encodeURIComponent(movieName)}`);
             if (!response.ok) {
-                throw new Error('Clientside: Failed to fetch movie data');
+                throw new Error(`HTTP error! Status: ${response.status}`);
             }
-            
+
             const data = await response.json();
-            displayMovieResults(data);
+	    console.log(data);
+             movieResults.innerHTML = "";
+
+            displayMovies(data.d, movieResults);
+
         } catch (error) {
-            console.error(error);
-            movieResultsContainer.innerHTML = '<p>Clientside: Failed to fetch movie data.</p>';
+            console.error("Error fetching movie data:", error);
         }
     });
-
-    function displayMovieResults(data) {
-        // Clear previous results
-        movieResultsContainer.innerHTML = '';
-
-        if (data.d.length === 0) {
-            movieResultsContainer.innerHTML = '<p>No movies found.</p>';
-            return;
-        }
-
-        const resultList = document.createElement('ul');
-
-        data.d.forEach((movie) => {
-            const listItem = document.createElement('li');
-
-            // Create an image element for the movie poster
-            const posterImg = document.createElement('img');
-            posterImg.src = movie.i.imageUrl;
-            posterImg.alt = movie.l; // Use the movie title as alt text
-            listItem.appendChild(posterImg);
-
-            // Create a span element for the movie title
-            const titleSpan = document.createElement('span');
-            titleSpan.textContent = movie.l; // Movie title
-            listItem.appendChild(titleSpan);
-
-            // Append the list item to the result list
-            resultList.appendChild(listItem);
-        });
-
-        movieResultsContainer.appendChild(resultList);
-    }
 });
+
+
+function displayMovies(movies, container) {
+        movies.forEach(movie => {
+            const movieContainer = document.createElement("div");
+            movieContainer.classList.add("movie-container");
+
+            const movieTitle = document.createElement("h2");
+            movieTitle.textContent = movie.l;
+            movieContainer.appendChild(movieTitle);
+
+            const movieYear = document.createElement("p");
+            movieYear.textContent = `Year: ${movie.y}`;
+            movieContainer.appendChild(movieYear);
+
+            const movieImage = document.createElement("img");
+            movieImage.src = movie.i ? movie.i.imageUrl : 'placeholder.jpg'; // Use a placeholder image if not available
+            movieImage.alt = movie.l;
+            movieContainer.appendChild(movieImage);
+
+            container.appendChild(movieContainer);
+        });
+    };
