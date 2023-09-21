@@ -43,27 +43,4 @@ router.post('/auth/login', UserController.login);
 
 router.get('/movie/search/:movie', movieController.movieSearch);
 
-
-/*
-async (request, response) => {
-const movie = request.params.movie;
-const url = `https://imdb8.p.rapidapi.com/auto-complete?q=${movie}`;
-const options = {
-  method: 'GET',
-  headers: {
-    'X-RapidAPI-Key': 'bc579c69a3msh5488c4b48da0464p11ec5ejsnc2fdee9c50e4',
-    'X-RapidAPI-Host': 'imdb8.p.rapidapi.com'
-  }
-};
-
-try {
-	const fetchResponse = await fetch(url, options);
-	const result = await fetchResponse.json();
-	console.log(result);
-	response.json(result);
-} catch (error) {
-	console.error(error);
-}
-}); */
-
 module.exports = router;
