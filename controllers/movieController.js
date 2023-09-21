@@ -1,8 +1,8 @@
 const fetch = require('node-fetch');
 
 exports.movieSearch = async (req, res) => {
-  const { movie } = req.query; 
-
+  const movie = req.params.movie;
+  console.log(movie);
   if (!movie) {
     return res.status(400).json({ error: 'Movie query is required' });
   }
