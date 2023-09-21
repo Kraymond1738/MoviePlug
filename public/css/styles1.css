@@ -149,7 +149,7 @@ h3{
 .cta{
     margin: 100px auto;
     width: 80%;
-    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(images/Movie1.jpg);
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(../images/Movie1.jpg);
     background-position: center;
     background-size: cover;
     border-radius: 10px;
@@ -187,7 +187,7 @@ h3{
 .sub-header{
     height: 120vh;
     width: 100%;
-    background-image: url(images/redmovie.png);
+    background-image: url(../images/redmovie.png);
     background-position:0%;
     text-align: center;
     color: black;

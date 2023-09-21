@@ -112,7 +112,7 @@ nav .fas{
 .sub-header{
     height: 120vh;
     width: 100%;
-    background-image: url(images/african.jpg);
+    background-image: url(../images/african.jpg);
     background-position:0%;
     text-align: center;
     color: black;

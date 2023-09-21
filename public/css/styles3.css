@@ -9,7 +9,7 @@
 .header {
     height: 50vh;
     width: 100%;
-    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)), url(images/blog.jpg);
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)), url(../images/blog.jpg);
     background-position: center;
     background-size: cover;
     position: relative;
@@ -17,7 +17,7 @@
 .sub-header{
     height: 100vh;
     width: 100%;
-    background-image: url(images/blogview.jpg);
+    background-image: url(../images/blogview.jpg);
     background-position:0%;
     text-align: center;
     color: black;

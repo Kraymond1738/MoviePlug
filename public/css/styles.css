@@ -9,7 +9,7 @@
 .header {
     height: 100vh;
     width: 100%;
-    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)), url(images/wallpaper.jpg);
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)), url(../images/wallpaper.jpg);
     background-position: center;
     background-size: cover;
     position: relative;
@@ -147,7 +147,7 @@ nav .fas{
 .scary{
     margin: 100px auto;
     width: 80%;
-    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)), url(images/scary.jpg);
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)), url(../images/scary.jpg);
     background-position: center;
     background-size: cover;
     border-radius: 10px;
@@ -398,7 +398,7 @@ h4{
 .Nows-col{
     margin: 100px auto;
     width: 100%;
-    background-image:  url(images/linear.jfif);
+    background-image:  url(../images/linear.jfif);
     background-position: center;
     background-size: cover;
     border-radius: 10px;
@@ -464,7 +464,7 @@ h4{
     .api-call {
         margin: 100px auto;
         width: 100%;
-        background-image: linear-gradient(rgba(26, 4, 4, 0.7),rgba(66, 5, 16, 0.7)), url(images/ai1.jfif);
+        background-image: linear-gradient(rgba(26, 4, 4, 0.7),rgba(66, 5, 16, 0.7)), url(../images/ai1.jfif);
         background-position: center;
         background-size: cover;
         border-radius: 10px;
@@ -523,7 +523,7 @@ h4{
 .sub-header2{
     height: 50vh;
     width: 100%;
-    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(images/office2.png);
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(../images/office2.png);
     background-position: left;
     text-align: center;
     color: #fff;
@@ -531,7 +531,7 @@ h4{
 .cta{
     margin: 100px auto;
     width: 80%;
-    background-image: url("images/drops.jpg");
+    background-image: url("../images/drops.jpg");
     background-position: center;
     background-size: cover;
     border-radius: 10px;
@@ -584,7 +584,7 @@ h6{
 .sub-header{
     height: 50vh;
     width: 100%;
-    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(images/about_us.jpg);
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(../images/about_us.jpg);
     background-position: center;
     text-align: center;
     color: #fff;
@@ -637,7 +637,7 @@ h5{
 .sub-header3{
     height: 50vh;
     width: 100%;
-    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(images/blog.jpg);
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(../images/blog.jpg);
     background-position: center;
     text-align: center;
     color: #fff;
@@ -788,7 +788,7 @@ h5{
     width: 200px;
     padding: 30px;
     margin: 10px;
-    background-image: url("images/goals.jpg");
+    background-image: url("../images/goals.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     box-shadow: 0 0 60px rgba(0, 0, 0, 0.1);
@@ -799,7 +799,7 @@ h5{
     width: 200px;
     padding: 30px;
     margin: 10px;
-    background-image: url("images/homecoming.jfif");
+    background-image: url("../images/homecoming.jfif");
     background-repeat: no-repeat;
     background-size: cover;
     box-shadow: 0 0 60px rgba(0, 0, 0, 0.1);
@@ -810,7 +810,7 @@ h5{
     width: 200px;
     padding: 30px;
     margin: 10px;
-    background-image: url("images/lol.jpg");
+    background-image: url("../images/lol.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     box-shadow: 0 0 60px rgba(0, 0, 0, 0.1);
@@ -821,7 +821,7 @@ h5{
     width: 200px;
     padding: 30px;
     margin: 10px;
-    background-image: url("images/ed.webp");
+    background-image: url("../images/ed.webp");
     background-repeat: no-repeat;
     background-size: cover;
     box-shadow: 0 0 60px rgba(0, 0, 0, 0.1);
