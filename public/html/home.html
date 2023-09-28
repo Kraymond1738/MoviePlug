@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="./css/styles.css">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-
+<script src="https://unpkg.com/scrollreveal"></script>
 </head> 
 <body>
 <section class="header">
@@ -71,7 +71,7 @@
         </div>
       </section>
     
-<!------- Course Categories ------->
+<!------- Movies Categories ------->
 <section class="header2">
     <section class="scary">
         <div class="row">
@@ -91,9 +91,9 @@
     </section>
 </section>
     
-    <!------- Tutors ------->
+    <!------- Devices ------->
     
-    <section class="tutors">
+    <section class="devices">
     
         <section class="hero-section">
             <div class="content-left">
@@ -108,7 +108,7 @@
             
     </section>
     
-    <!------- Courses ------->
+    <!------- Nows ------->
     
     <section class="Nows">
         <h4>Now On MoviePlug</h4>
@@ -182,6 +182,37 @@
         navLinks.style.right = "-200px"; 
     }
     
+    ScrollReveal({
+        reset:true,
+        distance: '60px',
+        duration: 2500,
+        delay: 400
+    });
+
+    ScrollReveal().reveal('li', {delay: 500, origin: 'left', interval: 700});
+    ScrollReveal().reveal('.logo', {delay: 700, origin: 'top', });
+    ScrollReveal().reveal('.text-box', {delay: 800, origin: 'bottom' });
+    ScrollReveal().reveal('h4, p2', {delay: 500, origin: 'left' });
+    ScrollReveal().reveal('.api-call', {delay: 600, origin: 'bottom' });
+    ScrollReveal().reveal('.feature-title', {delay: 500, origin: 'top', interval: 500 });
+    ScrollReveal().reveal('.feature-box1', {delay: 500, origin: 'top', });
+    ScrollReveal().reveal('.feature-box2', {delay: 700, origin: 'top', });
+    ScrollReveal().reveal('.feature-box3', {delay: 900, origin: 'top', });
+    ScrollReveal().reveal('.feature-box4', {delay: 1100, origin: 'top', });
+    ScrollReveal().reveal('.scary', {delay: 500, origin: 'bottom' });
+    ScrollReveal().reveal('.scary-col', {delay: 500, origin: 'bottom', interval: 600 });
+    ScrollReveal().reveal('.content-left', {delay: 500, origin: 'left' });
+    ScrollReveal().reveal('.content-right', {delay: 800, origin: 'right' });
+    ScrollReveal().reveal('.Nows', {delay: 500, origin: 'bottom' });
+    ScrollReveal().reveal('.Nows-col', {delay: 500, origin: 'bottom'});
+    ScrollReveal().reveal('h5, h6', {delay: 500, origin: 'top', interval: 400 });
+    ScrollReveal().reveal('.content-left1', {delay: 500, origin: 'left' });
+    ScrollReveal().reveal('.content-right1', {delay: 500, origin: 'right' });
+    ScrollReveal().reveal('.cta, .img', {delay: 700, origin: 'top' });
+    ScrollReveal().reveal('h1', {delay: 500, origin: 'bottom' });
+    ScrollReveal().reveal('.social-icon', {delay: 500, origin: 'top', interval: 600 });
+    ScrollReveal().reveal('.footer', {delay: 600, origin: 'bottom', });
+
 </script>
     
 </body>    

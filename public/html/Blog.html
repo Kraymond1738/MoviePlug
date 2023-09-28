@@ -8,6 +8,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<script src="https://unpkg.com/scrollreveal"></script>
     
 </head> 
 <body>
@@ -121,6 +122,17 @@
     function hideMenu(){
         navLinks.style.right = "-200px"; 
     }
+
+    ScrollReveal({
+        reset:true,
+        distance: '60px',
+        duration: 2500,
+        delay: 400
+    });
+
+    ScrollReveal().reveal('li', {delay: 500, origin: 'left', interval: 700});
+    ScrollReveal().reveal('h1', {delay: 700, origin: 'top', interval: 700});
+    ScrollReveal().reveal('.blog-content', {delay: 700, origin: 'top', interval: 600 });
     
 </script>
     
