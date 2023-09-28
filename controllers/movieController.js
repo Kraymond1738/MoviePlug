@@ -1,4 +1,5 @@
 const fetch = require('node-fetch');
+const config = require('../utils/config');
 
 exports.movieSearch = async (req, res) => {
   const movie = req.params.movie;
@@ -11,7 +12,7 @@ exports.movieSearch = async (req, res) => {
   const options = {
     method: 'GET',
     headers: {
-      'X-RapidAPI-Key': 'bc579c69a3msh5488c4b48da0464p11ec5ejsnc2fdee9c50e4',
+      'X-RapidAPI-Key': config.rapidApiKey,
       'X-RapidAPI-Host': 'imdb8.p.rapidapi.com'
     }
   };

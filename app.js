@@ -7,6 +7,7 @@ const mongoose = require('mongoose');
 const path = require('path');
 const connectDB = require('./utils/db');
 const session = require('express-session');
+const passport = require('passport');
 const flash = require('connect-flash');
 
 const PORT = process.env.PORT || 5000;
@@ -21,9 +22,10 @@ app.use(session({
   saveUninitialized: false,
 }));
 
-
 //middleware
 app.use(morgan('dev'));
+app.use(passport.initialize());
+app.use(passport.session());
 app.use(flash());
 app.use(express.urlencoded({ extended: false}));
 app.use(express.json());
