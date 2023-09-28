@@ -19,7 +19,7 @@ router.get('/landing(.html)?', (req, res) => {
         res.sendFile(path.join(__dirname, '..', 'public', 'html', 'landing.html'));
 });
 
-router.get('/home(.html)?',isAuthenticated, (req, res) => {
+router.get('/home(.html)?', (req, res) => {
         res.sendFile(path.join(__dirname, '..', 'public', 'html', 'home.html'));
 });
 
