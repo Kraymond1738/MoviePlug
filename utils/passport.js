@@ -1,6 +1,6 @@
 const passport = require('passport');
 const LocalStrategy = require('passport-local').Strategy;
-const User = require('../models/User'); // Assuming you have a User model
+const User = require('../models/User');
 
 // Serialize user object to store in session
 passport.serializeUser((user, done) => {
@@ -9,9 +9,13 @@ passport.serializeUser((user, done) => {
 
 // Deserialize user object from session
 passport.deserializeUser((id, done) => {
-  User.findById(id, (err, user) => {
-    done(err, user);
-  });
+  User.findById(id)
+    .then(user => {
+      done(null, user);
+    })
+    .catch(err => {
+      done(err, null);
+    });
 });
 
 // Configure the local strategy for passport

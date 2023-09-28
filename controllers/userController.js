@@ -40,5 +40,20 @@ exports.login = (req, res, next) => {
 };
 
 
+// controller for user logout
+exports.logout = (req, res) => {
+  try {
+    // Passport.js logout
+    req.logout(() => console.log('Logging out ...'));
 
+    // Set a flash message
+    req.flash('success', 'You have been successfully logged out.');
+
+    // Redirect to the home page or login page
+    res.redirect('/login');
+  } catch (error) {
+    console.error('Error during user logout:', error);
+    res.status(500).json({ message: 'Internal server error' });
+  }
+};
 
