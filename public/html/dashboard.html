@@ -350,26 +350,52 @@
 }
 
   </style>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const dashboardForm = document.getElementById("movie-search-form");
+
+  dashboardForm.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const queryInput = document.getElementById("movie-query");
+    const movieName = queryInput.value.trim();
+
+    if (movieName.length === 0) {
+      alert("Can't take an empty string");
+      console.log('Query can\'t be empty');
+      return;
+    }
+
+    // Redirect to search1.html with the query parameter
+    window.location.href = `http://127.0.0.1:5000/search.html?dashboardQuery=${encodeURIComponent(movieName)}`;
+  });
+});
+</script>
+
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script src="../js/logout.js"></script>
+
 </head>
 <body>
   <header class="header">
     <div class="logo">
       <i class="fas fa-bars"></i>
       <a href="http://127.0.0.1:5000/dashboard.html" target="">
-        <img src="images/logomovieplug.jpg">
+        <img src="../images/logomovieplug.jpg">
       </a>
       <div class="search-bar">
-        <input type="text" placeholder="  Search for Movies...">
-        <a href="http://127.0.0.1:5000/search1.html" target="">
-          <button class="search-button">Search</button>
-        </a>
+	<form id="movie-search-form">
+           <input type="text" id="movie-query" name="movie-query" placeholder="  Search for Movies...">
+           <button type="submit" class="search-button">Search</button>
+	</form>
       </div>
     </div>
     
     <div class="nav-links" id="navLinks" class="navigation" style="display: flex; justify-content: flex-end;">
                 <i class="fas fa-times" onclick="hideMenu()"></i>
                 <ul>
-                    <a href="http://127.0.0.1:5000/login.html" class="logout-button">Logout</a>
+                    <a href="#" class="logout-button">Logout</a>
                 </ul>
             </div>
   </header>
@@ -382,7 +408,7 @@
           <span class="menu-icon"></span>
         </div>
         <ul class="sidebar-menu">
-          <li><a href="http://127.0.0.1:5000/home.html"><i class="fas fa-home"></i>Home</a></li>
+          <li><a href="http://127.0.0.1:5000/dashboard.html"><i class="fas fa-home"></i>Home</a></li>
           <li><a href="http://127.0.0.1:5000/movies.html"><i class="fas fa-tape"></i>Movies & Shows</a></li>
           <li><a href="http://127.0.0.1:5000/trailer.html"><i class="fas fa-play"></i>Trailer</a></li>
           <li><a href="http://127.0.0.1:5000/discovers.html"><i class="fas fa-cloud"></i>Discovers</a></li>
@@ -400,9 +426,9 @@
         <h4>Home</h4>
         <h2>Trending Movies</h2>
            <p>Live Now</p>
-           <a href="#"><img src="images/galaxy.jpg" alt="hero image" class="hero-image1"></a>
-           <a href="#"><img src="images/island.jpg" alt="hero image" class="hero-image2"></a>
-           <a href="#"><img src="images/trans.jpg" alt="hero image" class="hero-image3"></a>
+           <a href="#"><img src="../images/galaxy.jpg" alt="hero image" class="hero-image1"></a>
+           <a href="#"><img src="../images/island.jpg" alt="hero image" class="hero-image2"></a>
+           <a href="#"><img src="../images/trans.jpg" alt="hero image" class="hero-image3"></a>
            
       </div>
       
@@ -413,19 +439,19 @@
     </div>
       <div class="container3">
            <div>
-            <img src="images/freeguy.jpg" alt="hero image">
+            <img src="../images/freeguy.jpg" alt="hero image">
         </div>
            <div>
-            <img src="images/guidian.jpg" alt="hero image">
+            <img src="../images/guidian.jpg" alt="hero image">
         </div>
            <div>
-            <img src="images/johnwickk.jpg" alt="hero image">
+            <img src="../images/johnwickk.jpg" alt="hero image">
         </div>
            <div>
-            <img src="images/extraction.jpg" alt="hero image">
+            <img src="../images/extraction.jpg" alt="hero image">
         </div>
            <div>
-            <img src="images/after1.jpg" alt="hero image">
+            <img src="../images/after1.jpg" alt="hero image">
         </div>
       </div>
       <div class="text2">
@@ -433,19 +459,19 @@
            <p>Movies</p>
       <div class="container4">
         <div>
-         <img src="images/antman.jpg" alt="hero image">
+         <img src="../images/antman.jpg" alt="hero image">
      </div>
         <div>
-         <img src="images/violent.jpg" alt="hero image">
+         <img src="../images/violent.jpg" alt="hero image">
      </div>
         <div>
-         <img src="images/spiderman2.jpeg" alt="hero image">
+         <img src="../images/spiderman2.jpeg" alt="hero image">
      </div>
         <div>
-         <img src="images/creed.jpg" alt="hero image">
+         <img src="../images/creed.jpg" alt="hero image">
      </div>
         <div>
-         <img src="images/acrimony.jfif" alt="hero image">
+         <img src="../images/acrimony.jfif" alt="hero image">
      </div>
    </div>
 
@@ -472,7 +498,7 @@
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
         
         </div>
-    </footer>
+    </section>
 
     
 </section>
@@ -486,16 +512,15 @@ ScrollReveal({
         delay: 400
     });
 
-    ScrollReveal().reveal('h2, h3, h4, p', {delay: 500, origin: 'left', interval: 700});
-    ScrollReveal().reveal('.logo img, i', {delay: 600, origin: 'left' });
-    ScrollReveal().reveal('.search-bar', {delay: 900, origin: 'top', interval: 700});
-    ScrollReveal().reveal('.nav-links ul', {delay: 600, origin: 'right' });
-    ScrollReveal().reveal('.sidebar', {delay: 600, origin: 'bottom' });
-    ScrollReveal().reveal('.sidebar-menu li', {delay: 600, origin: 'left', interval: 500});
-    ScrollReveal().reveal('.dashboard-item img', {delay: 600, origin: 'bottom', interval: 1000 });
-    ScrollReveal().reveal('.container3 img', {delay: 600, origin: 'bottom', interval: 1000 });
-    ScrollReveal().reveal('.container4 img', {delay: 600, origin: 'bottom', interval: 1000 });
-    ScrollReveal().reveal('.social-icon', {delay: 600, origin: 'bottom', interval: 1000 });
+    ScrollReveal().reveal('h2, h3, h4, p', {delay: 500, origin: 'left', interval: 200});
+    ScrollReveal().reveal('.logo img,', {delay: 500, origin: 'left' });
+    ScrollReveal().reveal('.search-bar', {delay: 500, origin: 'top', interval: 200});
+    ScrollReveal().reveal('.nav-links ul', {delay: 500, origin: 'right' });
+    ScrollReveal().reveal('.sidebar', {delay: 500, origin: 'bottom' });
+    ScrollReveal().reveal('.dashboard-item img', {delay: 500, origin: 'bottom', interval: 200 });
+    ScrollReveal().reveal('.container3 img', {delay: 500, origin: 'bottom', interval: 200 });
+    ScrollReveal().reveal('.container4 img', {delay: 500, origin: 'bottom', interval: 100 });
+    ScrollReveal().reveal('.social-icon', {delay: 500, origin: 'bottom', interval: 200 });
 
 </script>
 </body>
