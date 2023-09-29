@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", async function () {
-  console.log("Search1.html DOMContentLoaded");
+  console.log("Search.html DOMContentLoaded");
 
   const searchForm = document.getElementById("movie-search-form");
   const movieResults = document.getElementById("movie-results");
@@ -39,11 +39,11 @@ function displayMovies(movies, container) {
     const { l: name, y: year, i: { imageUrl } = {} } = movie;
     const posterSrc = imageUrl || 'placeholder.jpg';
 
-    return `<li class="movie-container">
+    return `<ul id="movie-container">
               <h2>${name}</h2>
               <p>Year: ${year}</p>
               <img src="${posterSrc}" alt="${name}">
-            </li>`;
+            </ul>`;
   });
 
   // Create an unordered list and append movie cards
