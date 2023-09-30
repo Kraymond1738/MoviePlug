@@ -36,36 +36,23 @@ document.addEventListener("DOMContentLoaded", function () {
 function displayMovies(movies, container) {
   console.log("Displaying Movies:", movies);
 
-  // Create an unordered list
+  // Create a movie card for each movie using map and template literals
+  const movieCards = movies.map(movie => {
+    const { l: name, y: year, i: { imageUrl } = {} } = movie;
+    const posterSrc = imageUrl || 'placeholder.jpg';
+
+    return `<ul id="movie-container">
+              <h2>${name}</h2>
+              <p>Year: ${year}</p>
+              <img src="${posterSrc}" alt="${name}">
+            </ul>`;
+  });
+
+  // Create an unordered list and append movie cards
   const movieList = document.createElement("ul");
   movieList.classList.add("movie-list");
-
-  movies.forEach(movie => {
-    // Create a list item for each movie
-    const movieListItem = document.createElement("li");
-    movieListItem.classList.add("movie-container");
-
-    // Movie title
-    const movieTitle = document.createElement("h2");
-    movieTitle.textContent = movie.l;
-    movieListItem.appendChild(movieTitle);
-
-    // Movie year
-    const movieYear = document.createElement("p");
-    movieYear.textContent = `Year: ${movie.y}`;
-    movieListItem.appendChild(movieYear);
-
-    // Movie image
-    const movieImage = document.createElement("img");
-    movieImage.src = movie.i ? movie.i.imageUrl : 'placeholder.jpg';
-    movieImage.alt = movie.l;
-    movieListItem.appendChild(movieImage);
-
-    // Append the list item to the movie list
-    movieList.appendChild(movieListItem);
-  });
+  movieList.innerHTML = movieCards.join('');
 
   // Append the movie list to the container
   container.appendChild(movieList);
 }
-

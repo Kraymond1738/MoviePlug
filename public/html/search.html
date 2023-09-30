@@ -55,7 +55,10 @@
       margin-top: 25px;
       margin-right: 750px;
       color: #fff;
-      font-size: 20px;
+      font-size: 35px;
+      text-align: center;
+      margin-left: 450px;
+      margin-bottom: -50px;   
     }
 
     .sidebar {
@@ -129,6 +132,7 @@
       background-color: #1a1919;
       font-family: 'Poppins', 'sans serif';
       margin-top: 7px;
+      color: #fff;
     }
     
     .search-button {
@@ -185,18 +189,23 @@
     .logout-button:hover{
       background-color: #1d1c1c;;
     }
-    .container {
-        justify-content: left;
-        align-items: left;
+
+    #movie-results {
+        justify-content: right;
+        align-items: right;
+        width: 50px;
+        margin-top: 80px;
+        
     }
-    .container div {
-        height: 250px;
-        width: 300px;
+    #movie-results div {
+        height: 200px;
+        margin-top: 50px;
+        width: 150px;
         float: right;
         text-align: center;
-        margin: 10px;
-        margin-right: -35px;
-        margin-top: 10px;
+        margin: 50px;
+        margin-left: 100px;
+        margin-top: 50px;
         padding: 10px ;
         border: 1px solid #ddd;
         border-radius: 5px;
@@ -205,27 +214,34 @@
         
     }
     
-
-    .container:hover {
-        transform: scale(1.05);
-    }
-
-    .container h2 {
+    #movie-results h2 {
         font-size: 1.2em;
         margin-bottom: 5px;
+        text-align: justify;
+        margin-left: 450px;
     }
 
-    .container p {
+    #movie-results p {
         color: #777;
+        text-align: center;
+        margin-left: 450px;
     }
 
-    .container img {
-        max-width: 500;
-        height: 500;
+    #movie-results img {
+        width: 750px;
+        height: 750px;
         border-radius: 5px;
-        margin-top: 10px;
+        margin-top: 20px;
+        margin-left: 80px;
     }   
-
+ 
+    #movie-container li {
+    display: flex;
+    width: 50px;
+    height: 250px;
+    padding: 5px 10px;
+    
+    }
 
 
 .footer h4 {
@@ -235,7 +251,6 @@
     margin-top: 850px;
     margin-bottom: -60px;
 }
-
   </style>
 
 <!-- handles the input from dashboard -->
@@ -304,11 +319,9 @@
         </ul>
       </div>
       <h2>Results</h2>
-    <div class="container">
         <div id="movie-results">
             <!-- Movie results will be displayed here -->
         </div>
-    </div>
 
 
   <!------- Footer ------->
