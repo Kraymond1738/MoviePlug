@@ -26,7 +26,9 @@ exports.signup = async (req, res) => {
 
     // Generate a JWT token and send it in the response
     const token = generateToken(user);
-    return res.status(200).json({ token });
+    
+    // Redirect the user to the login page after successful signup
+    return res.redirect(`/login`);
 
   } catch (error) {
     console.error('Error during user registration:', error);
