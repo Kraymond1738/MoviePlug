@@ -1,6 +1,8 @@
 const passport = require('passport');
 const LocalStrategy = require('passport-local').Strategy;
 const User = require('../models/User');
+const { Strategy: JwtStrategy, ExtractJwt } = require('passport-jwt');
+const { secretKey } = require('./config');
 
 // Serialize user object to store in session
 passport.serializeUser((user, done) => {
@@ -47,6 +49,27 @@ passport.use(
       }
     }
   )
+);
+
+const jwtOptions = {
+  jwtFromRequest: ExtractJwt.fromAuthHeaderAsBearerToken(),
+  secretOrKey: secretKey, // Use the imported secret key
+};
+
+passport.use(
+  new JwtStrategy(jwtOptions, async (payload, done) => {
+    try {
+      const user = await User.findById(payload.sub);
+
+      if (!user) {
+        return done(null, false); // User not found
+      }
+
+      return done(null, user); // User found and authenticated
+    } catch (error) {
+      return done(error, false); // Error occurred during authentication
+    }
+  })
 );
 
 module.exports = passport;
