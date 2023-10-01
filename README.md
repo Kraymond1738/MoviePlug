@@ -78,7 +78,7 @@ Movieplug has features that can be found through our dropdown navigation bar men
 
 These features will be explored below!
 
-<img width=50% src="/public/images/Screenshot (57)jpg">
+<img width=50% src="/public/images/Screenshot (57).png">
 
 
 ### **Dashboard**
