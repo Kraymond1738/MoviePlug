@@ -113,7 +113,7 @@ This particular feature enables users to search for movies and results of movies
 ## Built With
 * [Python](http://www.python.org) - The Backend Language
 * [Javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) - The Frontend Language
-* [Html/css] (https://www.codecademy.com/catalog/language/html-css) - Frontend Language
+* [Html/css](https://www.codecademy.com/catalog/language/html-css) - Frontend Language
 * [Flask](http://flask.pocoo.org/docs/1.0/) - The Web Development Framework
 * [SQLAlchemy](https://www.sqlalchemy.org/) - Python SQL Toolkit and Object Relational Mapper
 * [MySQL](https://mysql.com) - Relational Database Management System
