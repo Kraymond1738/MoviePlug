@@ -1,6 +1,6 @@
 # MoviePlug Web Application
 
-<img src="/public/images/learnhub_logoedited.png" alt="MoviePlug" title="MoviePlug">
+<img src="/public/images/logoedited.png" alt="MoviePlug" title="MoviePlug">
 
 MoviePlug is a redefined streaming service and recommendation web application that customizes cinematic content, makes it easy to discover, watch and share favorite movies.
 
