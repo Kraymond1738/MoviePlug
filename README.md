@@ -12,7 +12,7 @@ MoviePlug is a redefined streaming service and recommendation web application th
 - [Features](#features)
     - [Home Page](#Home-Page)
     - [Dashboard](#Dashboard)
-    - [Movies & Shows](#Movies & Shows)
+    - [Movies and Shows](#Movies and Shows)
     - [Trailer](#Trailer)
     - [RapidAPI MovieSearch](#RapidAPI MovieSearch)
 - [Built With](#built-with)
