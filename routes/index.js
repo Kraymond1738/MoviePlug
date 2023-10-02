@@ -47,6 +47,14 @@ router.get('/stream(.html)?', (req, res) => {
         res.sendFile(path.join(__dirname, '..', 'public', 'html', 'player.html'));
 });
 
+router.get('/trailer(.html)?', (req, res) => {
+        res.sendFile(path.join(__dirname, '..', 'public', 'html', 'trailer.html'));
+});
+
+router.get('/megwatch(.html)?', (req, res) => {
+        res.sendFile(path.join(__dirname, '..', 'public', 'html', 'megawatch.html'));
+});
+
 router.get('/test(.html)?', (req, res) => {
         res.sendFile(path.join(__dirname, '..', 'public', 'html', 'testsearch.html'));
 });
