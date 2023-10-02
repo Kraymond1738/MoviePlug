@@ -51,6 +51,7 @@
       background-color: #0a0d0f;
     }
 
+<<<<<<< HEAD
     h3 {
       color:#fff;
       padding: 3px 10px;
@@ -63,6 +64,19 @@
       margin-left: 120px;
       margin-right: 790px;
     }
+=======
+  h3 {
+      margin-top: 22px;
+      margin-right: 650px;
+      color: #fff;
+      font-size: 30px;
+      text-align: center;
+      margin-bottom: 10px;
+      background-color: #fc2323;
+      border-radius: 8px;
+      border-right: 0px;
+     }
+>>>>>>> 38736d2a1c5ebe5dfcea87b96b87e98811791c83
 
     .sidebar {
       background-color: #0a0b0c;
