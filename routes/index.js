@@ -43,6 +43,14 @@ router.get('/search(.html)?', (req, res) => {
         res.sendFile(path.join(__dirname, '..', 'public', 'html', 'search.html'));
 });
 
+router.get('/stream(.html)?', (req, res) => {
+        res.sendFile(path.join(__dirname, '..', 'public', 'html', 'player.html'));
+});
+
+router.get('/test(.html)?', (req, res) => {
+        res.sendFile(path.join(__dirname, '..', 'public', 'html', 'testsearch.html'));
+});
+
 router.post('/auth/signup', UserController.signup);
 
 router.post('/auth/login', UserController.login);

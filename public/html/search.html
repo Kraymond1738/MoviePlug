@@ -51,15 +51,17 @@
       background-color: #0a0d0f;
     }
 
-    h2 {
-      margin-top: 25px;
-      margin-right: 750px;
+  h3 {
+      margin-top: 22px;
+      margin-right: 650px;
       color: #fff;
-      font-size: 35px;
+      font-size: 30px;
       text-align: center;
-      margin-left: 450px;
-      margin-bottom: -50px;   
-    }
+      margin-bottom: 10px;
+      background-color: #fc2323;
+      border-radius: 8px;
+      border-right: 0px;
+     }
 
     .sidebar {
       background-color: #0a0b0c;
@@ -74,7 +76,7 @@
       border-radius: 5px;
       margin-left: 10px;
     }
-    
+
     .toggle-menu {
       display: none;
       flex-direction: column;
@@ -83,14 +85,14 @@
       cursor: pointer;
       margin-bottom: 20px;
     }
-    
+
     .menu-icon {
       width: 30px;
       height: 3px;
       background-color: #fff;
       margin-bottom: 5px;
     }
-    
+
     .sidebar-menu {
       list-style: none;
       padding: 0;
@@ -101,11 +103,11 @@
     .sidebar-menu li a:hover {
         color: rgb(238, 30, 30);
     }
-    
+
     .sidebar-menu li {
       margin-bottom: 20px;
     }
-    
+
     .sidebar-menu li a {
       color: #fff;
       text-decoration: none;
@@ -115,14 +117,14 @@
         margin-right: 16px;
         margin-left: 16px;
     }
-    
+
     .search-bar {
       margin-bottom: 5px;
       padding-right: 20px;
       margin-top: -26px;
       margin-right: 500px;
     }
-    
+
     .search-bar input[type="text"] {
       padding: 2px;
       width: 350px;
@@ -134,7 +136,7 @@
       margin-top: 7px;
       color: #fff;
     }
-    
+
     .search-button {
       padding: 3px 10px;
       background-color: #fc2323;
@@ -149,9 +151,6 @@
     }
     .search-button:hover {
         background-color: #1d1c1c;;
-    }
-    .content {
-      margin-left: 270px;
     }
 
     .logo {
@@ -192,10 +191,8 @@
 
     #movie-results {
         justify-content: right;
-        align-items: right;
-        width: 50px;
-        margin-top: 80px;
-        
+        margin-top: 40px;
+
     }
     #movie-results div {
         height: 200px;
@@ -211,36 +208,37 @@
         border-radius: 5px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         transition: transform 0.3s;
-        
-    }
-    
+      }
+
+
     #movie-results h2 {
         font-size: 1.2em;
         margin-bottom: 5px;
-        text-align: justify;
-        margin-left: 450px;
+        text-align: center;
+        margin-left: 40px;
+        color: #fff;
     }
 
     #movie-results p {
-        color: #777;
+        color: #fff;
         text-align: center;
-        margin-left: 450px;
+        margin-left: 35px;
     }
 
     #movie-results img {
-        width: 750px;
-        height: 750px;
+        width: 850px;
+        height: 800px;
         border-radius: 5px;
         margin-top: 20px;
-        margin-left: 80px;
-    }   
- 
-    #movie-container li {
+        margin-left: 10px;
+    }
+
+    #movie-container ul {
     display: flex;
     width: 50px;
     height: 250px;
     padding: 5px 10px;
-    
+
     }
 
 
@@ -291,7 +289,7 @@
         </form>
       </a>
       </div>
-        
+
     <div class="nav-links" id="navLinks" class="navigation" style="display: flex; justify-content: flex-end;">
                 <i class="fas fa-times" onclick="hideMenu()"></i>
                 <ul>
@@ -312,29 +310,29 @@
           <li><a href="htp://127.0.0.1:5000/movies.html"><i class="fas fa-tape"></i>Movies & Shows</a></li>
           <li><a href="htp://127.0.0.1:5000/Discovers.html"><i class="fas fa-cloud"></i>Discovers</a></li>
           <li><a href="htp://127.0.0.1:5000/watchlist.html"><i class="fas fa-list"></i>Watchlist</a><br>
-            <li><a href="htp://127.0.0.1:5000/livetv.html"><i class="fas fa-tv"></i>Live Tv</a></li>
+          <li><a href="htp://127.0.0.1:5000/livetv.html"><i class="fas fa-tv"></i>Live Tv</a></li>
           <li><a href="htp://127.0.0.1:5000/musicvideos.html"><i class="fas fa-video"></i>Music Videos</a><br>
 
         </li>
         </ul>
       </div>
-      <h2>Results</h2>
+      <h3>Results</h3>
         <div id="movie-results">
             <!-- Movie results will be displayed here -->
         </div>
 
 
   <!------- Footer ------->
-    
+
   <section class="footer">
-    
+
     <h4>&copy; 2023 MoviePlug. All rights reserved.</h4>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-        
+
     </footer>
 
-    
+
 </section>
 </body>
 </html>

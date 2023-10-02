@@ -14,7 +14,7 @@
     /* Styles for the video player */
 
 body {
-   background-image: url(images/black1.jpg);
+   background-image: url(../images/black1.jpg);
    background-size: cover;
    background-position: center;
    position: relative;
@@ -118,17 +118,17 @@ input[type="range"] {
 <body>
     <div class="content">
         <div class="logo">
-            <a href="http://127.0.0.1:5000/home" target="" >
-                <img src="images/logomovieplug.jpg">
+            <a href="http://127.0.0.1:5000/dashboard" target="" >
+                <img src="../images/logomovieplug.jpg">
             </a>
         </div>
     </div>
     <div class="video-container">
         <video id="video" controls>
-            <source src="trailer1.mp4" type="video/mp4">
+            <source src="../videos/Blue.Beetle.(NKIRI.COM).2023.WEBRip.DOWNLOADED.FROM.NKIRI.COM.mkv" type="video/mp4">
             Your browser does not support the video tag.
         </video>
-        <!--
+        <!-- 
         <div class="video-controls">
             <button id="play-pause-button">&#9658;</button>
             <button id="backward-button">&#9668;</button>
@@ -145,7 +145,7 @@ input[type="range"] {
         <!-- Minimized video goes here -->
     </div>
 
-    <script src="script.js">
+    <script> 
         const video = document.getElementById('video');
 const playPauseButton = document.getElementById('play-pause-button');
 const backwardButton = document.getElementById('backward-button');
