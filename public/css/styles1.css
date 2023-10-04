@@ -28,7 +28,7 @@ nav img{
 .nav-links ul li a{
     color: #292828;
     text-decoration: none;
-    font-size: 13px;
+    font-size: 16px;
     font-weight: 700;
 }
 .nav-links ul li::after{

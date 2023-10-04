@@ -47,7 +47,7 @@ nav img{
 .nav-links ul li a{
     color: #fff;
     text-decoration: thick;
-    font-size: 13px;
+    font-size: 16px;
     font-family: 'Poppins', 'sans-serif';
 }
 .nav-links ul li::after{

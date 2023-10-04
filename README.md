@@ -115,7 +115,7 @@ This particular feature enables users to search for movies and results of movies
 * [Python](http://www.python.org) - Backend Language
 * [Javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) - The Frontend Language
 * [Html/css](https://www.codecademy.com/catalog/language/html-css) - Frontend Language
-* [Expres](https://expressjs.com/) - The Web Development Framework
+* [Express](https://expressjs.com/) - The Web Development Framework
 * [Mongoose](https://mongoosejs.com/) - Object Modeling
 * [MongoDB](https://www.mongodb.com) - Database Management System
 * [Moncha Framework](https://mochajs.org/) - Javascript Test Framework
