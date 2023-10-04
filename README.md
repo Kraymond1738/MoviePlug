@@ -107,7 +107,7 @@ This section shows the list of trailer movies available in cart.
 
 This particular feature enables users to search for movies and results of movies are recommended and generated in-line with the inputed word.
 
-<img width=100% src="/public/images/Screenshot (42).png">
+<img width=75% src="/public/images/Screenshot (42).png">
 
 
 ## Built With
