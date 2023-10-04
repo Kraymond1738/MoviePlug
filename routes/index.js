@@ -58,29 +58,4 @@ router.get('/auth/logout', UserController.logout);
 
 router.get('/movie/search/:movie', movieController.movieSearch);
 
-// Protected route that requires JWT authentication
-router.get('/auth/login', verifyToken, (req, res) => {
-        res.json({ message: 'This is a protected route.' });
-      });
-      
-      // Function to verify JWT token
-      function verifyToken(req, res, next) {
-        // Get the token from the request headers or query parameters
-        const token = req.headers['authorization'] || req.query.token;
-      
-        if (!token) {
-          return res.status(403).json({ message: 'Access denied. Token missing.' });
-        }
-      
-        // Verify the token
-        jwt.verify(token, JWT_SECRET_KEY, (err, decoded) => {
-          if (err) {
-            return res.status(401).json({ message: 'Unauthorized. Invalid token.' });
-          }
-      
-          // Token is valid, you can access the protected route
-          next();
-        });
-      }
-
 module.exports = router;

@@ -1,7 +1,6 @@
 // Import necessary modules
 const express = require('express');
 const morgan = require('morgan');
-const bodyParser = require('body-parser');
 const cors = require('cors');
 const mongoose = require('mongoose');
 const path = require('path');
