@@ -107,17 +107,18 @@ This section shows the list of trailer movies available in cart.
 
 This particular feature enables users to search for movies and results of movies are recommended and generated in-line with the inputed word.
 
-<img width=75% src="/public/images/Screenshot (42).png">
+<img width=100% src="/public/images/Screenshot (42).png">
 
 
 ## Built With
-* [Python](http://www.python.org) - The Backend Language
+* [Nodejs](https://nodejs.org/en) - Backend Language
+* [Python](http://www.python.org) - Backend Language
 * [Javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) - The Frontend Language
 * [Html/css](https://www.codecademy.com/catalog/language/html-css) - Frontend Language
-* [Flask](http://flask.pocoo.org/docs/1.0/) - The Web Development Framework
-* [SQLAlchemy](https://www.sqlalchemy.org/) - Python SQL Toolkit and Object Relational Mapper
-* [MySQL](https://mysql.com) - Relational Database Management System
-* [Unittest](https://docs.python.org/3/library/unittest.html) - Unittesting Framework
+* [Expres](https://expressjs.com/) - The Web Development Framework
+* [Mongoose](https://mongoosejs.com/) - Object Modeling
+* [MongoDB](https://www.mongodb.com) - Database Management System
+* [Moncha Framework](https://mochajs.org/) - Javascript Test Framework
 
 ## API
 
