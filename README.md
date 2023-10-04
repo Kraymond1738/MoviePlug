@@ -62,19 +62,19 @@ Access it on MoviePlug.com and create an account today!
 
 ## Screenshots
 
-<img width=50% src="/public/images/Screenshot (46).png">
+<img width=100% src="/public/images/Screenshot (46).png">
 
-<img width=50% src="/public/images/Screenshot (35).png">
+<img width=100% src="/public/images/Screenshot (35).png">
 
-<img width=50% src="/public/images/Screenshot (34).png">
+<img width=100% src="/public/images/Screenshot (34).png">
 
-<img width=50% src="/public/images/Screenshot (44).png">
+<img width=100% src="/public/images/Screenshot (44).png">
 
 ## Features
 
 Movieplug has features that can be found through our dropdown navigation bar menu.
 
-<img width=50% src="/public/images/Screenshot (26).png">
+<img width=100% src="/public/images/Screenshot (26).png">
 
 These features will be explored below!
 
@@ -85,29 +85,29 @@ These features will be explored below!
 
 The dashboard webpage allows a user to choose from our catlogue of movies, change modes from light mod to dark mode, stream movies and so on.
 
-<img width=75% src="/public/images/Screenshot (55).png">
+<img width=100% src="/public/images/Screenshot (55).png">
 
-<img width=75% src="/public/images/Screenshot (45).png">
+<img width=100% src="/public/images/Screenshot (45).png">
 
-<img width=75% src="/public/images/Screenshot (49).png">
+<img width=100% src="/public/images/Screenshot (49).png">
 
 ### **Movies and Shows**
 
 This page gives a view of all our offers.
 
-<img width=75% src="/public/images/Screenshot (50).png">
+<img width=100% src="/public/images/Screenshot (50).png">
 
 ### **Trailer**
 
 This section shows the list of trailer movies available in cart.
 
-<img width=75% src="/public/images/Screenshot (41).png">
+<img width=100% src="/public/images/Screenshot (41).png">
 
 ### **RapidAPI MovieSearch**
 
 This particular feature enables users to search for movies and results of movies are recommended and generated in-line with the inputed word.
 
-<img width=50% src="/public/images/Screenshot (42).png">
+<img width=100% src="/public/images/Screenshot (42).png">
 
 
 ## Built With
@@ -128,11 +128,11 @@ This particular feature enables users to search for movies and results of movies
 GET: Returns a user email
 POST: Adds a user email
 
-<img width=50% src="/public/images/rapid.jpg">
+<img width=75% src="/public/images/rapid.jpg">
 
-<img width=50% src="/public/images/rapid2.png">
+<img width=75% src="/public/images/rapid2.png">
 
-<img width=50% src="/public/images/rapidservice.png">
+<img width=75% src="/public/images/rapidservice.png">
 
 
 ## Future
