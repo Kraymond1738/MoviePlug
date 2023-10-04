@@ -10,7 +10,7 @@
 
     body {
       font-family: 'Poppins', sans-serif;
-      background-color: #1a1919;
+      background-color: var(--primary-color);
       margin: 0;
       padding: 0;
       width: 100%;
@@ -28,6 +28,12 @@
       border-radius: 5px;
       position: fixed;
     }
+    h2{
+  font-size: 14px;
+  color: #fff;
+  margin-top: -30px;
+  margin-right: 10px;
+}
 
     .container2 {
       max-width: 1000px;
@@ -81,27 +87,27 @@
     .dashboard-item h2 {
       margin-top: 25px;
       margin-right: 750px;
-      color: #fff;
+      color: var(--secondary-color);
       font-size: 20px;
     }
     .text h3 {
-        color: #fff;
+        color: var(--secondary-color);
         margin-right: 760px;
     }
     .text p {
-        color:rgb(194, 192, 190);
+        color: var(--secondary-color);
         font-size: 15px;
         font-family: Verdana, Geneva, Tahoma, sans-serif;
         margin-left: 45px;
         text-align: left;
     }
     .text2 h3 {
-        color: #fff;
+        color: var(--secondary-color);
         margin-right: 755px;
         margin-top: -65px;
     }
     .text2 p {
-        color:rgb(194, 192, 190);
+        color: var(--secondary-color);
         font-size: 15px;
         font-family: Verdana, Geneva, Tahoma, sans-serif;
         margin-left: 45px;
@@ -109,7 +115,7 @@
     }
 
     p {
-        color:rgb(194, 192, 190);
+        color: var(--secondary-color);
         margin-right: 850px;
         margin-top: -10px;
         font-size: 15px;
@@ -120,7 +126,7 @@
       
     }
     .dashboard-item h4 {
-      color:rgb(194, 192, 190);
+      color: var(--secondary-color);
       font-size: 15px;
       font-family: Verdana, Geneva, Tahoma, sans-serif;
       margin-left: -870px;
@@ -184,10 +190,10 @@
     .dashboard-item2 h3 {
       margin-top: -200px;
       margin-right: 785px;
-      color: #fff;
+      color: var(--secondary-color);
     }
     .dashboard-item2 p{
-        color:rgb(194, 192, 190);
+        color: var(--secondary-color);
         font-size: 15px;
         font-family: Verdana, Geneva, Tahoma, sans-serif;
         margin-right: 810px;
@@ -264,6 +270,7 @@
       margin-right: -140px;
       background-color: #1a1919;
       font-family: 'Poppins', 'sans serif';
+      color: #fff;
     }
     
     .search-button {
@@ -283,6 +290,22 @@
     }
     .content {
       margin-left: 270px;
+    }
+
+    :root {
+      --primary-color: #1a1919;
+      --secondary-color: #fff;
+    }
+
+    .dark-theme {
+      --primary-color: #fdfdfd;
+      --secondary-color: #1a1919;
+    }
+    #icon {
+      width: 25px;
+      cursor: pointer;
+      margin-bottom: 45px;
+      margin-top: -35px;
     }
 
     .logo {
@@ -335,7 +358,7 @@
 }
 .footer h4 {
     text-align: center;
-    color:rgb(194, 192, 190);
+    color: var(--secondary-color);
     font-size: 12px;
     margin-bottom: -65px;
     margin-top: 0px;
@@ -348,6 +371,25 @@
 .logo i:hover {
   color: #ee1313;
 }
+
+.names p {
+  display: inline;
+  justify-content: space-between;
+  margin-left: 85px;
+  font-size: 15px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin-right: 75px;
+  padding: 1px 10px;
+  background-color: #fc2323;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+.names p:hover {
+  background-color: #0f0f0f;
+  transition: 1s;
+}
+
 
   </style>
 
@@ -394,6 +436,8 @@ document.addEventListener("DOMContentLoaded", function () {
     
     <div class="nav-links" id="navLinks" class="navigation" style="display: flex; justify-content: flex-end;">
                 <i class="fas fa-times" onclick="hideMenu()"></i>
+		<h2>MODE</h2>
+                <img src="images/moon.png" id="icon">
                 <ul>
                     <a href="#" class="logout-button">Logout</a>
                 </ul>
@@ -413,7 +457,7 @@ document.addEventListener("DOMContentLoaded", function () {
           <li><a href="http://127.0.0.1:5000/trailer.html"><i class="fas fa-play"></i>Trailer</a></li>
           <li><a href="http://127.0.0.1:5000/discovers.html"><i class="fas fa-cloud"></i>Discovers</a></li>
           <li><a href="http://127.0.0.1:5000/watchlist.html"><i class="fas fa-list"></i>Watchlist</a><br>
-            <li><a href="http://127.0.0.1:5000/livetv.html"><i class="fas fa-tv"></i>Live Tv</a></li>
+            <li><a href="http://127.0.0.1:5000/stream.html"><i class="fas fa-tv"></i>Stream Now</a></li>
           <li><a href="http://127.0.0.1:5000/musicvideos.html"><i class="fas fa-video"></i>Music Videos</a><br>
 
         </li>
@@ -433,6 +477,13 @@ document.addEventListener("DOMContentLoaded", function () {
       </div>
       
     </div>
+
+    <div class="names">
+      <p>Jurassic World 3</p>
+      <p>The Mysterious Island 2</p>
+      <p>Transylvania</p>
+    </div>
+
     <div class="text">
         <h3>Popular Movies</h3>
            <p>Most Stream</p>
@@ -515,12 +566,23 @@ ScrollReveal({
     ScrollReveal().reveal('h2, h3, h4, p', {delay: 500, origin: 'left', interval: 200});
     ScrollReveal().reveal('.logo img,', {delay: 500, origin: 'left' });
     ScrollReveal().reveal('.search-bar', {delay: 500, origin: 'top', interval: 200});
-    ScrollReveal().reveal('.nav-links ul', {delay: 500, origin: 'right' });
+    ScrollReveal().reveal('.nav-links ul, img', {delay: 500, origin: 'right' });
     ScrollReveal().reveal('.sidebar', {delay: 500, origin: 'bottom' });
     ScrollReveal().reveal('.dashboard-item img', {delay: 500, origin: 'bottom', interval: 200 });
     ScrollReveal().reveal('.container3 img', {delay: 500, origin: 'bottom', interval: 200 });
     ScrollReveal().reveal('.container4 img', {delay: 500, origin: 'bottom', interval: 100 });
     ScrollReveal().reveal('.social-icon', {delay: 500, origin: 'bottom', interval: 200 });
+
+    var icon = document.getElementById("icon");
+
+    icon.onclick = function(){
+      document.body.classList.toggle("dark-theme");
+      if(document.body.classList.contains("dark-theme")){
+        icon.src = "images/sun.png";
+      }else {
+        icon.src ="images/moon.png";
+      }
+    }
 
 </script>
 </body>

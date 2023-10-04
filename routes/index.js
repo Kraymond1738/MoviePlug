@@ -5,13 +5,6 @@ const fetch = require('node-fetch');
 const UserController = require('../controllers/userController');
 const movieController = require('../controllers/movieController');
 const isAuthenticated =  require('../utils/authChecker')
-const jwt = require('jsonwebtoken');
-const { JWT_SECRET_KEY } = require('../utils/config'); // Import the JWT secret key
-
-
-router.get('/', (req, res) => {
-        res.sendFile(path.join(__dirname, '..', 'public', 'html', 'landing.html'));
-});
 
 router.get('/signup(.html)?', (req, res) => {
   res.sendFile(path.join(__dirname, '..', 'public', 'html', 'signup.html'));
@@ -48,6 +41,22 @@ router.get('/contact(.html)?', (req, res) => {
 
 router.get('/search(.html)?', (req, res) => {
         res.sendFile(path.join(__dirname, '..', 'public', 'html', 'search.html'));
+});
+
+router.get('/stream(.html)?', (req, res) => {
+        res.sendFile(path.join(__dirname, '..', 'public', 'html', 'player.html'));
+});
+
+router.get('/trailer(.html)?', (req, res) => {
+        res.sendFile(path.join(__dirname, '..', 'public', 'html', 'trailer.html'));
+});
+
+router.get('/megwatch(.html)?', (req, res) => {
+        res.sendFile(path.join(__dirname, '..', 'public', 'html', 'megawatch.html'));
+});
+
+router.get('/test(.html)?', (req, res) => {
+        res.sendFile(path.join(__dirname, '..', 'public', 'html', 'testsearch.html'));
 });
 
 router.post('/auth/signup', UserController.signup);
